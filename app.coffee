@@ -56,7 +56,7 @@ app.use express.static __dirname + '/public'
 app.get '/', (request, response) ->
   if request.query? and request.query['join-token']?
     token = request.query['join-token']
-    response.redirect("http://#{config.publicHost}/#{token}", 303)
+    response.redirect("http://#{config.publicHost}:#{publicPort}/#{token}", 303)
     return
   response.render 'home',
     "config": config
@@ -79,7 +79,7 @@ app.get '/:token', (request, response) ->
   if not droom?
     rooms.push new Room 
   otherUserJoined = droom? and (droom.top? or droom.bottom?)
-  publicLink = "http://#{config.publicHost}/#{token}"
+  publicLink = "http://#{config.publicHost}:#{publicPort}/#{token}"
   response.render 'room',
     "otherUserJoined": otherUserJoined
     room: token
