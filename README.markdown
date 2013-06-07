@@ -8,7 +8,8 @@ This is made possible via [socket.io](http://socket.io) and Google's [js diff li
 
 (C) 2011 Derek Arnold under the MIT License
 
-Derek did all the work; [Daniel](http://3e.org/dmd/) nagged him to do it.
+Derek did all the work; [Daniel](http://3e.org/dmd/) nagged him to do it, and
+now it's rupa's problem (gdi).
 
 [See it live](http://typeto.me/)
 
