@@ -18,3 +18,13 @@ NOTE: Ensure that you are using an up-to-date version of Node.js, socket.io, and
 * coffee-script
 * eco
 * express
+
+Install on Ubuntu 13
+
+    aptitude install git nodejs npm
+    git clone <repo>
+    cd typeto.me
+    npm install express@2.5.11 eco socket.io coffee-script
+    nodejs node_modules/coffee-script/bin/coffee -c app.coffee
+    cp config.json-dist config.json
+    nodejs app.js
